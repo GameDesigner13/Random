@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minumum-scale=0.5">
+  <title>CraneGame</title>
+</head>
+ <body>
+   
+<iframe id="pc" class="game-pc" src="test.html" width="1280" height="720"></iframe>
+  <iframe id="pc" class="game-mobile" src="mobileFinal.html" ></iframe>
+  <iframe id="pc" class="landscape" src="mobileFinal.html" ></iframe>
+
+  <div class="text-pc">
+  <center>
+    <h1>Click To Start!</h1>
+  </center>
+  </div>
+
+  <div class="text-portrait">
+    <center>
+      <h1>Switch To Full Screen Mode For Best Experience!</h1>
+    </center>
+  </div>
+  
+  
+</body>
+</html>
+
+
+<style>
+
+  .text-pc{
+    display: none;
+  }
+  .text-portrait{
+    display: none;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  @media only screen and (orientation: landscape) {
+    html.mobile .landscape { 
+      display: block;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 90%;
+      width: 90%;   
+    }     
+
+  }
+
+  @media only screen and (orientation: portrait) {
+    html.mobile .game-mobile{
+      display: block;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 350px;
+      width: 100vw;
+    }   
+    
+  }
+
+
+  @media only screen and (min-width: 900px){
+    html.desktop .game-pc {
+    
+      display: block;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+  
+
+    }
+
+  }
+  
+
+
+</style>
